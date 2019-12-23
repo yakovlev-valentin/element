@@ -1,7 +1,7 @@
 #! /bin/sh
 mkdir temp_web
-git config --global user.name "element-bot"
-git config --global user.email "wallement@gmail.com"
+git config --global user.name "valentin-yakovlev"
+git config --global user.email "vyakovlev.codica@gmail.com"
 
 if [ "$ROT_TOKEN" = "" ]; then
   echo "Bye~"
@@ -36,7 +36,7 @@ if [ "$TRAVIS_TAG" ]; then
   # build site
   npm run deploy:build
   cd temp_web
-  git clone --depth 1 -b gh-pages --single-branch https://$ROT_TOKEN@github.com/ElemeFE/element.git && cd element
+  git clone --depth 1 -b gh-pages --single-branch https://$ROT_TOKEN@github.com/yakovlev-valentin/element.git && cd element
   # build sub folder
   echo $TRAVIS_TAG
 
